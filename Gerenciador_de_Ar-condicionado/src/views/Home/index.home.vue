@@ -1,9 +1,9 @@
 <script lang="ts">
 export default {
-  name: 'about'
+  name: 'home'
 }
 </script>
 
 <template>
-  <h1>About</h1>
+  <h1>Página inicial</h1>
 </template>

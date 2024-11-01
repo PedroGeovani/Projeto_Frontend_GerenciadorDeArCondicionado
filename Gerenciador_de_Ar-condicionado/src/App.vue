@@ -9,7 +9,7 @@ export default {
   <header>
       <nav>
         <RouterLink to="/">Home</RouterLink> | 
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/register">Registro</RouterLink>
       </nav>  
   </header>
 
