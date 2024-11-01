@@ -1,20 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { Views } from '@/views/index.view'
+import { guards } from './guards.router/index.guard'
+import { authorized } from './authorized.router'
+import { notAuthorized } from './notAuthorized.router'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Views.Home
-    },
-    {
-      path: '/register',
-      name: 'register',
-      component: Views.Register
-    }
-  ]
+  routes: [...authorized, ...notAuthorized]  
 })
 
+router.beforeEach((to, from, next) => guards(to, from, next))
 export default router
