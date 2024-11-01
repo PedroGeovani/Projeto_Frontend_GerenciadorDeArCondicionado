@@ -1,13 +1,27 @@
 <script lang="ts">
 export default {
-  name: 'home'
+  name: 'home',
+  data() {
+    return {
+      ambiente: [
+        { environmentName: 'Academia', status:'on' },
+        { environmentName: 'Laboratório', status:'off'},
+        { environmentName: 'Refeitório', status:'on'},
+        { environmentName: 'Biblioteca', status:'on' },
+        { environmentName: 'SAMB', status:'on'},
+        { environmentName: 'LMC 2', status:'on'}, 
+        { environmentName: 'Redes', status:'off'},
+        { environmentName: 'LMC 3', status:'off'}, 
+      ]
+    }
+  },
 }
 </script>
 
 <template>
-  <section class="flex flex-col gap-4">
-    <span class="flex text-2xl">Status do Ar-Condicionado</span>
-    <Button type="button" label="Ligar" />
-    <Button type="button" label="Desligar" />
+  <section class="flex flex-wrap justify-center gap-2 p-4 items-start">
+    <div v-for="item in ambiente">
+      <Environment :environmentName="item.environmentName" :status="item.status" />
+    </div>
   </section>
 </template>

@@ -6,6 +6,6 @@ export const authorized: Array<RouteRecordRaw> = [
     path: '/register', 
     name: 'register', 
     component: Views.Register, 
-    meta: { authorized: true } 
+    meta: { authorized: false } 
   },
 ]

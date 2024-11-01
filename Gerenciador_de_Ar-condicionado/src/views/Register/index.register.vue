@@ -1,9 +1,9 @@
 <script lang="ts">
 export default {
-  name: 'about'
+  name: 'register',  
 }
 </script>
 
 <template>
-  <h1>Página de registro</h1>
+  Registrar
 </template>
