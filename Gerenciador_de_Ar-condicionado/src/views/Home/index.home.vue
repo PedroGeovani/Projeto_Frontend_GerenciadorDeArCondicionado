@@ -5,5 +5,9 @@ export default {
 </script>
 
 <template>
-  <h1>Página inicial</h1>
+  <section class="flex flex-col gap-4">
+    <span class="flex text-2xl">Status do Ar-Condicionado</span>
+    <Button type="button" label="Ligar" />
+    <Button type="button" label="Desligar" />
+  </section>
 </template>
