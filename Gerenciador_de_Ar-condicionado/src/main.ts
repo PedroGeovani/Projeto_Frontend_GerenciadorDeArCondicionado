@@ -5,13 +5,14 @@ import App from './App.vue'
 import Aura from '@primevue/themes/aura'
 import PrimeVue from 'primevue/config'
 import router from './router/index.route'
-import { componetPrimeVue } from "./modules/component-primevue.module";
-import { componentsDefault } from "./modules/component-default.module";
+import { componetPrimeVue } from "./modules/component-primevue.module"
+import { componentsDefault } from "./modules/component-default.module"
+import 'primeicons/primeicons.css'
 
 const app = createApp(App)
 app.use(PrimeVue, 
   { theme: { 
-    preset: Aura 
+    preset: Aura
   } 
 })
 app.use(componetPrimeVue)

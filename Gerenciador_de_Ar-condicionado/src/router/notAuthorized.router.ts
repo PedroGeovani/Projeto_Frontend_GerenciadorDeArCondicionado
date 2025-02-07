@@ -6,7 +6,13 @@ export const notAuthorized: Array<RouteRecordRaw> = [
     path: '/',
     name: 'home',
     component: Views.Home,
-    meta: { authorized: true }
+    meta: { authorized: false }
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: Views.Login,
+    meta: { authorized: false }
   },
   {
     path: '/:pathMatch(.*)*',
