@@ -8,4 +8,10 @@ export const authorized: Array<RouteRecordRaw> = [
     component: Views.Register, 
     meta: { authorized: false } 
   },
+  { 
+    path: '/program/:name', 
+    name: 'program', 
+    component: Views.Program, 
+    meta: { authorized: false } 
+  },
 ]

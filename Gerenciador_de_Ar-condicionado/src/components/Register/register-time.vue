@@ -1,5 +1,5 @@
 <script lang="ts">
-import { registerDate } from '@/models/model.register-date';
+import { RegisterDate } from '@/models/model.register-date';
 
 export default {
   name: 'register-Time',

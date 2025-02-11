@@ -1,6 +1,6 @@
 export class Views {
-  static Home(): Promise<any> {
-    return import('./Home/index.home.vue')
+  static Environment(): Promise<any> {
+    return import('./Environment/index.environment.vue')
   } 
   static Register(): Promise<any> {
     return import('./Register/index.register.vue')
@@ -10,6 +10,9 @@ export class Views {
   } 
   static NotFound(): Promise<any> {
     return import('./NotFound/index.notfound.vue')
+  } 
+  static Program(): Promise<any> {
+    return import('./Program/index.program.vue')
   } 
 }
 

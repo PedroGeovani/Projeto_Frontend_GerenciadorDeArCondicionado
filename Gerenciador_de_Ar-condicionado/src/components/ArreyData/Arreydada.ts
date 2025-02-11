@@ -1,10 +1,10 @@
-import type { registerDate } from "@/models/model.register-date";
+import type { RegisterDate } from "@/models/model.register-date";
 
 export const DataProduts = {
-  getRegisterTime(): registerDate[] {
+  getRegisterTime(): RegisterDate[] {
     return [
       {
-        day: '2025 10 25 12:40;10',
+        environment: 'name',
         startTimeMorning: '2025 10 25 12:40;10',
         endTimeMorning: '2025 10 25 12:40;10',
         startTimeAfternoon: '2025 10 25 12:40;10',

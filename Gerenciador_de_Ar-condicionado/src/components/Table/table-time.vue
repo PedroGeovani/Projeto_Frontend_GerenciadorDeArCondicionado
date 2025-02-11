@@ -37,8 +37,7 @@ export default {
     <template #title>
       <span class="flex w-full py-2 text-xl font-bold justify-center">Grade de Horário</span>
     </template>
-    <template #subtitle>
-      
+    <template #subtitle>      
     </template>
     <template #content>
       <div class="card">

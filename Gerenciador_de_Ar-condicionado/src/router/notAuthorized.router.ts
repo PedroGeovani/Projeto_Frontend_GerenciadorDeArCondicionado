@@ -4,8 +4,8 @@ import type { RouteRecordRaw } from "vue-router"
 export const notAuthorized: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'home',
-    component: Views.Home,
+    name: 'environment',
+    component: Views.Environment,
     meta: { authorized: false }
   },
   {
