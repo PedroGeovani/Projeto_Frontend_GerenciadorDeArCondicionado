@@ -1,6 +1,6 @@
 <script lang="ts">
 import { EnvironmentDate } from '@/models/model.environment';
-import { EnvironmentService } from '@/views/Environment/service.register';
+import { EnvironmentService } from '@/service/service.environment';
 import { take } from 'rxjs';
 
 export default {
@@ -34,8 +34,8 @@ export default {
 </script>
 
 <template>
-  <section class="w-full">
-  <div class="flex flex-wrap justify-center gap-2 p-4 items-start">
+  <section class="w-full mt-2">
+  <div class="flex flex-wrap justify-center gap-3 p-4 items-start">
     <div v-for="item in content">
       <Environment :environmentName="item.environment" :status="'on'" />
     </div>

@@ -24,13 +24,13 @@ export default {
                 <div v-else class="h-10 bg-red-900"> </div>
             </template>
             <template #title>
-                <span class="flex font-bold mb-4"> Ambiente: {{ environmentName }}</span>
+                <span class="flex font-bold mb-3"> Ambiente: {{ environmentName }}</span>
+                <span class="flex"> Programação </span>
             </template>
             <template #content>
                 <div class="flex flex-wrap justify-between gap-4">
-                    <Button type="button" class="flex p-2 w-2/5" @click=""> Programação </Button>
-                    <Button type="button" class="flex p-2 w-2/5"
-                        @click="$router.push({ name: 'program', params: { name: environmentName } })"> Editar </Button>
+                    <Button type="button" class="flex p-2 w-2/5" @click="$router.push({ name: 'program', params: { name: environmentName } })"> Mostrar </Button>
+                    <Button type="button" class="flex p-2 w-2/5" @click="$router.push({ name: 'edit', params: { name: environmentName } })"> Criar </Button>
                 </div>
             </template>
         </Card>

@@ -1,8 +1,7 @@
 <script lang="ts">
 import type { EnvironmentDate } from '@/models/model.environment';
-import { EnvironmentService } from './service.register';
+import { EnvironmentService } from '@/service/service.environment'
 import { take } from 'rxjs';
-import TableTime from '@/components/Table/table-time.vue';
 
 export default {
   name: 'register',
@@ -82,7 +81,7 @@ export default {
         :style="{ width: '25rem' }">
         <div class="flex justify-end gap-2">
           <Button type="button" label="Não" severity="secondary" @click="visible = false, $router.push('/')"></Button>
-          <Button type="button" label="Sim" @click="visible = false, $router.push('/program')"></Button>
+          <Button type="button" label="Sim" @click="visible = false, $router.push(`/edit/${newEnvironment.environment}`)"></Button>
         </div>
       </Dialog>
     </div>

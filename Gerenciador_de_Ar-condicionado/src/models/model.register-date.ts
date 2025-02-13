@@ -2,6 +2,7 @@ export class RegisterDate {
   constructor(
     public id: string,
     public environment: string,
+    public date: string,
     public startTimeMorning?: string,
     public endTimeMorning?: string,
     public startTimeAfternoon?: string,

@@ -7,8 +7,12 @@ export class ManagerRest {
     getListMeneger(): Observable<any> {          
         return api.get("/getList")
     }
+    
+    getMenegerByEnvironmentAndDate(environment: String, date: String): Observable<any> { 
+        return api.get(`/getEnvironment/${environment}/${date}`);
+    }
 
-    getMenegerByEnvoronment(environment: String): Observable<any> { 
+    getMenegerByEnvironment(environment: String): Observable<any> { 
         return api.get(`/getEnvironment/${environment}`);
     }
     

@@ -14,4 +14,10 @@ export const authorized: Array<RouteRecordRaw> = [
     component: Views.Program, 
     meta: { authorized: false } 
   },
+  { 
+    path: '/edit/:name', 
+    name: 'edit', 
+    component: Views.Edit, 
+    meta: { authorized: false } 
+  },
 ]

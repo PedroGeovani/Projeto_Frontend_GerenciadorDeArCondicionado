@@ -2,7 +2,7 @@ import { Observable, Subject, take } from "rxjs"
 import { ManagerRest } from "@/service/rest/rest.schedule"
 import type { RegisterDate } from "@/models/model.register-date";
 
-export class MenegerService {
+export class RegisteService {
     constructor(
         private _manager = new ManagerRest(),
     ) { }
@@ -22,7 +22,7 @@ export class MenegerService {
     }
 
     getMenegerByEnvironment(nameEnvironment: string) {
-        this._manager.getMenegerByEnvoronment(nameEnvironment)
+        this._manager.getMenegerByEnvironment(nameEnvironment)
             .pipe(take(1))
             .subscribe({
                 next: (response) => {
@@ -31,15 +31,25 @@ export class MenegerService {
             });
     }
 
-    updateMeneger(body: RegisterDate) {
-        this._manager.updateMeneger(body)
+    getMenegerByEnvironmentAndDate(nameEnvironment: string, date: string) {
+        this._manager.getMenegerByEnvironmentAndDate(nameEnvironment, date)
             .pipe(take(1))
             .subscribe({
                 next: (response) => {
-                    this.manager$.next(response);
-                }
+                    this.manager$.next(response)
+                },
             });
     }
+  
+    updateMeneger(body: RegisterDate) {
+      this._manager.updateMeneger(body)
+      .pipe(take(1))
+      .subscribe({
+        next: (response) => {
+          this.manager$.next(response);
+        }
+      });
+    }    
 
     crateMeneger(body: RegisterDate) {
         this._manager.createMeneger(body)
