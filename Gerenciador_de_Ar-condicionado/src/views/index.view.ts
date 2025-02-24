@@ -1,21 +1,21 @@
 export class Views {
-  static Environment(): Promise<any> {
-    return import('./Environment/index.environment.vue')
+  static ShowEnvironment(): Promise<any> {
+    return import('./ShowEnvironment/index.vue')
   } 
-  static Register(): Promise<any> {
-    return import('./RegisterEnvironment/index.register.vue')
-  } 
+  static ShowProgram(): Promise<any> {
+    return import('./ShowProgram/index.vue')
+  }  
   static Login(): Promise<any> {
-    return import('./Login/index.login.vue')
-  } 
+    return import('./Login/index.vue')
+  }  
   static NotFound(): Promise<any> {
-    return import('./NotFound/index.notfound.vue')
-  } 
-  static Program(): Promise<any> {
-    return import('./ShowProgram/index.program.vue')
-  } 
-  static Edit(): Promise<any> {
-    return import('./CriateProgram/index.register.vue')
+    return import('./NotFound/index.vue')
+  }
+  static CreateEnvironment(): Promise<any> {
+    return import('./CreateEnvironment/index.vue')
+  }
+  static CreateProgram(): Promise<any> {
+    return import('./CriateProgram/index.vue')
   } 
 }
 

@@ -1,25 +1,25 @@
 import { Observable } from "rxjs";
 import api from "../config/service.config.rxjs";
-import type { EnvironmentDate } from "@/models/model.environment";
+import type { CEnvironment } from "@/models/model.environment";
 
 export class EnvironmentRest {  
     getListEnvironment(): Observable<any> {          
-        return api.get("/getListEnvironment")
+        return api.get("/")
     }
 
-    getEnvironmentOne(environment: String): Observable<any> { 
-        return api.get(`/getEnvironmentOne/${environment}`);
+    getEnvironmentOne(id: String): Observable<any> { 
+        return api.get(`/${id}`);
     }
     
-    createEnvironment(body: EnvironmentDate): Observable<any> {       
-        return api.post("/createEnvironment", body);       
+    createEnvironment(body: CEnvironment): Observable<any> {       
+        return api.post("/", body);       
     }
 
-    updateEnvironment(body: EnvironmentDate): Observable<any> {
-        return api.put(`/updateEnvironment`, body);
+    updateEnvironment(id: string, body: CEnvironment): Observable<any> {
+        return api.put(`/${id}`, body);
     } 
 
-    excludeEnvironment(idMeneger: string): Observable<any> {
-        return api.deleteR(`/excludeEnvironment/${idMeneger}`);
+    excludeEnvironment(id: string): Observable<any> {
+        return api.deleteR(`/${id}`);
     }
 }

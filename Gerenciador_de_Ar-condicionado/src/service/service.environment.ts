@@ -1,6 +1,6 @@
 import { Observable, Subject, take } from "rxjs"
 import { EnvironmentRest } from "@/service/rest/rest.environment"
-import { EnvironmentDate } from "@/models/model.environment"
+import type { CEnvironment } from "@/models/model.environment";
 
 export class EnvironmentService {
     constructor(
@@ -21,8 +21,8 @@ export class EnvironmentService {
             });
     }
 
-    getEnvironmentOne(idEnvironment: string) {
-        this._environment.getEnvironmentOne(idEnvironment)
+    getEnvironmentOne(id: string) {
+        this._environment.getEnvironmentOne(id)
             .pipe(take(1))
             .subscribe({
                 next: (response) => {
@@ -31,8 +31,8 @@ export class EnvironmentService {
             });
     }
 
-    updateEnvironment(body: EnvironmentDate) {
-        this._environment.updateEnvironment(body)
+    updateEnvironment(id: string, body: CEnvironment) {
+        this._environment.updateEnvironment(id, body)
             .pipe(take(1))
             .subscribe({
                 next: (response) => {
@@ -41,7 +41,7 @@ export class EnvironmentService {
             });
     }
 
-    crateEnvironment(body: EnvironmentDate) {
+    crateEnvironment(body: CEnvironment) {
         this._environment.createEnvironment(body)
             .pipe(take(1))
             .subscribe({
@@ -51,8 +51,8 @@ export class EnvironmentService {
             });
     }
 
-    excludeEnvironment(idEnvironment: string) {
-        this._environment.excludeEnvironment(idEnvironment)
+    excludeEnvironment(id: string) {
+        this._environment.excludeEnvironment(id)
             .pipe(take(1))
             .subscribe({
                 next: (response) => {
